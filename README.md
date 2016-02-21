@@ -1,31 +1,25 @@
-# AssociatedValues
+# OrderedSet
 
-`AssociatedValues` allows you to easily add stored properties in class extensions:
+`OrderedSet` is a native Swift ordered set. It has the behavior and features of `Array` and `Set` in one abstract type.
 ```swift
-extension UIView {
-  var identifier: String {
-      get {
-          return getAssociatedValueForProperty("identifier", ofObject: self, withInitialValue: "Unknown")
-      }
-      set {
-          setAssociatedValue(newValue, forProperty: "identifier", ofObject: self)
-      }
-  }
-}
+var names: OrderedSet<String> = ["Brad", "Jake", "Susan"]
+names += ["Janice", "Brad"] // ["Jake", "Susan", "Janice", "Brad"]
+names.subtractInPlace(["Jake", "Janice"]) // ["Susan", "Brad"]
+names.insert("Robert", atIndex: 1) // ["Susan", "Robert", "Brad"]
+names.contains("Susan") // true
+names.isSupersetOf(["Susan", "Jake"]) // false
 ```
-
-Enjoy!
 
 ## Installation
 
-`AssociatedValues` is available through [CocoaPods](http://cocoapods.org). To install, simply include the following lines in your podfile:
+`OrderedSet` is available through [CocoaPods](http://cocoapods.org). To install, simply include the following lines in your podfile:
 ```ruby
 use_frameworks!
-pod 'AssociatedValues'
+pod 'OrderedSet'
 ```
 Be sure to import the module at the top of your .swift files:
 ```swift
-import AssociatedValues
+import OrderedSet
 ```
 Alternatively, clone this repo or download it as a zip and include the classes in your project.
 
@@ -35,4 +29,4 @@ Brad Hilton, brad@skyvive.com
 
 ## License
 
-`AssociatedValues` is available under the MIT license. See the LICENSE file for more info.
+`OrderedSet` is available under the MIT license. See the LICENSE file for more info.
