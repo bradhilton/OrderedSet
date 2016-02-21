@@ -10,6 +10,16 @@
 		A2C94F1A1C77CF150043535F /* OrderedSet.h in Headers */ = {isa = PBXBuildFile; fileRef = A2C94F191C77CF150043535F /* OrderedSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2C94F211C77CF150043535F /* OrderedSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C94F161C77CF150043535F /* OrderedSet.framework */; };
 		A2C94F261C77CF150043535F /* OrderedSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F251C77CF150043535F /* OrderedSetTests.swift */; };
+		A2C94F311C77CF250043535F /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F301C77CF250043535F /* OrderedSet.swift */; };
+		A2C94F351C77D6950043535F /* OrderedSet+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F341C77D6950043535F /* OrderedSet+CustomStringConvertible.swift */; };
+		A2C94F371C77D6CC0043535F /* OrderedSet+ArrayLiteralConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F361C77D6CC0043535F /* OrderedSet+ArrayLiteralConvertible.swift */; };
+		A2C94F391C77D7600043535F /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F381C77D7600043535F /* Functions.swift */; };
+		A2C94F3B1C77D7930043535F /* OrderedSet+CollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F3A1C77D7930043535F /* OrderedSet+CollectionType.swift */; };
+		A2C94F3D1C77D8D00043535F /* OrderedSet+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F3C1C77D8D00043535F /* OrderedSet+Hashable.swift */; };
+		A2C94F3F1C77DA080043535F /* OrderedSet+RangeReplaceableCollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F3E1C77DA080043535F /* OrderedSet+RangeReplaceableCollectionType.swift */; };
+		A2C94F411C78FECD0043535F /* OrderedSet+MutableSliceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F401C78FECD0043535F /* OrderedSet+MutableSliceable.swift */; };
+		A2C94F431C7927FC0043535F /* OrderedSet+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F421C7927FC0043535F /* OrderedSet+Array.swift */; };
+		A2C94F451C7931F50043535F /* OrderedSet+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F441C7931F50043535F /* OrderedSet+Set.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +39,16 @@
 		A2C94F201C77CF150043535F /* OrderedSetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderedSetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C94F251C77CF150043535F /* OrderedSetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedSetTests.swift; sourceTree = "<group>"; };
 		A2C94F271C77CF150043535F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2C94F301C77CF250043535F /* OrderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
+		A2C94F341C77D6950043535F /* OrderedSet+CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		A2C94F361C77D6CC0043535F /* OrderedSet+ArrayLiteralConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+ArrayLiteralConvertible.swift"; sourceTree = "<group>"; };
+		A2C94F381C77D7600043535F /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		A2C94F3A1C77D7930043535F /* OrderedSet+CollectionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+CollectionType.swift"; sourceTree = "<group>"; };
+		A2C94F3C1C77D8D00043535F /* OrderedSet+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Hashable.swift"; sourceTree = "<group>"; };
+		A2C94F3E1C77DA080043535F /* OrderedSet+RangeReplaceableCollectionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+RangeReplaceableCollectionType.swift"; sourceTree = "<group>"; };
+		A2C94F401C78FECD0043535F /* OrderedSet+MutableSliceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+MutableSliceable.swift"; sourceTree = "<group>"; };
+		A2C94F421C7927FC0043535F /* OrderedSet+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Array.swift"; sourceTree = "<group>"; };
+		A2C94F441C7931F50043535F /* OrderedSet+Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Set.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +93,16 @@
 			children = (
 				A2C94F191C77CF150043535F /* OrderedSet.h */,
 				A2C94F1B1C77CF150043535F /* Info.plist */,
+				A2C94F301C77CF250043535F /* OrderedSet.swift */,
+				A2C94F341C77D6950043535F /* OrderedSet+CustomStringConvertible.swift */,
+				A2C94F361C77D6CC0043535F /* OrderedSet+ArrayLiteralConvertible.swift */,
+				A2C94F381C77D7600043535F /* Functions.swift */,
+				A2C94F3A1C77D7930043535F /* OrderedSet+CollectionType.swift */,
+				A2C94F3C1C77D8D00043535F /* OrderedSet+Hashable.swift */,
+				A2C94F3E1C77DA080043535F /* OrderedSet+RangeReplaceableCollectionType.swift */,
+				A2C94F401C78FECD0043535F /* OrderedSet+MutableSliceable.swift */,
+				A2C94F421C7927FC0043535F /* OrderedSet+Array.swift */,
+				A2C94F441C7931F50043535F /* OrderedSet+Set.swift */,
 			);
 			path = OrderedSet;
 			sourceTree = "<group>";
@@ -194,6 +224,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C94F3F1C77DA080043535F /* OrderedSet+RangeReplaceableCollectionType.swift in Sources */,
+				A2C94F451C7931F50043535F /* OrderedSet+Set.swift in Sources */,
+				A2C94F3B1C77D7930043535F /* OrderedSet+CollectionType.swift in Sources */,
+				A2C94F411C78FECD0043535F /* OrderedSet+MutableSliceable.swift in Sources */,
+				A2C94F391C77D7600043535F /* Functions.swift in Sources */,
+				A2C94F431C7927FC0043535F /* OrderedSet+Array.swift in Sources */,
+				A2C94F3D1C77D8D00043535F /* OrderedSet+Hashable.swift in Sources */,
+				A2C94F371C77D6CC0043535F /* OrderedSet+ArrayLiteralConvertible.swift in Sources */,
+				A2C94F351C77D6950043535F /* OrderedSet+CustomStringConvertible.swift in Sources */,
+				A2C94F311C77CF250043535F /* OrderedSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +348,7 @@
 		A2C94F2B1C77CF150043535F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +359,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.OrderedSet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A2C94F2C1C77CF150043535F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
