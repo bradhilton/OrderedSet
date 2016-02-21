@@ -12,6 +12,18 @@ names.isSupersetOf(["Susan", "Jake"]) // false
 
 ## Installation
 
+### Swift Package Manager
+You can build `OrderedSet` using the [Swift Package Manager](https://github.com/apple/swift-package-manager). Just include `OrderedSet` as a package in your dependencies:
+```
+.Package(url: "https://github.com/bradhilton/OrderedSet.git", majorVersion: 1)
+```
+Be sure to import the module at the top of your .swift files:
+```swift
+import OrderedSet
+```
+
+### CocoaPods
+
 `OrderedSet` is available through [CocoaPods](http://cocoapods.org). To install, simply include the following lines in your podfile:
 ```ruby
 use_frameworks!
@@ -21,7 +33,15 @@ Be sure to import the module at the top of your .swift files:
 ```swift
 import SwiftOrderedSet
 ```
-Alternatively, clone this repo or download it as a zip and include the classes in your project.
+### Carthage
+`OrderedSet` is available through [Carthage](https://github.com/Carthage/Carthage). Just add the following to your cartfile:
+```
+github "bradhilton/OrderedSet"
+```
+Be sure to import the module at the top of your .swift files:
+```swift
+import OrderedSet
+```
 
 ## Author
 
