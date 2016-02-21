@@ -19,7 +19,7 @@ pod 'SwiftOrderedSet'
 ```
 Be sure to import the module at the top of your .swift files:
 ```swift
-import OrderedSet
+import SwiftOrderedSet
 ```
 Alternatively, clone this repo or download it as a zip and include the classes in your project.
 
