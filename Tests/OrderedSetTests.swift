@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import OrderedSet
+@testable import OrderedSet
 
 class OrderedSetTests: XCTestCase {
     
