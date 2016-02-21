@@ -15,7 +15,7 @@ names.isSupersetOf(["Susan", "Jake"]) // false
 `OrderedSet` is available through [CocoaPods](http://cocoapods.org). To install, simply include the following lines in your podfile:
 ```ruby
 use_frameworks!
-pod 'OrderedSet'
+pod 'SwiftOrderedSet'
 ```
 Be sure to import the module at the top of your .swift files:
 ```swift
