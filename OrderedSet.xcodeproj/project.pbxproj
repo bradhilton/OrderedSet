@@ -21,6 +21,7 @@
 		A2C94F431C7927FC0043535F /* OrderedSet+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F421C7927FC0043535F /* OrderedSet+Array.swift */; };
 		A2C94F451C7931F50043535F /* OrderedSet+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F441C7931F50043535F /* OrderedSet+Set.swift */; };
 		A2C94F471C79605E0043535F /* OrderedSet.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2C94F461C79605E0043535F /* OrderedSet.podspec */; };
+		A2C94F491C7962610043535F /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F481C7962610043535F /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A2C94F421C7927FC0043535F /* OrderedSet+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Array.swift"; sourceTree = "<group>"; };
 		A2C94F441C7931F50043535F /* OrderedSet+Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Set.swift"; sourceTree = "<group>"; };
 		A2C94F461C79605E0043535F /* OrderedSet.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OrderedSet.podspec; sourceTree = "<group>"; };
+		A2C94F481C7962610043535F /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +77,11 @@
 		A2C94F0C1C77CF150043535F = {
 			isa = PBXGroup;
 			children = (
-				A2C94F461C79605E0043535F /* OrderedSet.podspec */,
-				A2C94F181C77CF150043535F /* OrderedSet */,
-				A2C94F241C77CF150043535F /* OrderedSetTests */,
 				A2C94F171C77CF150043535F /* Products */,
+				A2C94F181C77CF150043535F /* Sources */,
+				A2C94F241C77CF150043535F /* Tests */,
+				A2C94F461C79605E0043535F /* OrderedSet.podspec */,
+				A2C94F481C7962610043535F /* Package.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,32 +94,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A2C94F181C77CF150043535F /* OrderedSet */ = {
+		A2C94F181C77CF150043535F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A2C94F191C77CF150043535F /* OrderedSet.h */,
-				A2C94F1B1C77CF150043535F /* Info.plist */,
-				A2C94F301C77CF250043535F /* OrderedSet.swift */,
-				A2C94F341C77D6950043535F /* OrderedSet+CustomStringConvertible.swift */,
-				A2C94F361C77D6CC0043535F /* OrderedSet+ArrayLiteralConvertible.swift */,
 				A2C94F381C77D7600043535F /* Functions.swift */,
-				A2C94F3A1C77D7930043535F /* OrderedSet+CollectionType.swift */,
-				A2C94F3C1C77D8D00043535F /* OrderedSet+Hashable.swift */,
-				A2C94F3E1C77DA080043535F /* OrderedSet+RangeReplaceableCollectionType.swift */,
-				A2C94F401C78FECD0043535F /* OrderedSet+MutableSliceable.swift */,
+				A2C94F1B1C77CF150043535F /* Info.plist */,
 				A2C94F421C7927FC0043535F /* OrderedSet+Array.swift */,
+				A2C94F361C77D6CC0043535F /* OrderedSet+ArrayLiteralConvertible.swift */,
+				A2C94F3A1C77D7930043535F /* OrderedSet+CollectionType.swift */,
+				A2C94F341C77D6950043535F /* OrderedSet+CustomStringConvertible.swift */,
+				A2C94F3C1C77D8D00043535F /* OrderedSet+Hashable.swift */,
+				A2C94F401C78FECD0043535F /* OrderedSet+MutableSliceable.swift */,
+				A2C94F3E1C77DA080043535F /* OrderedSet+RangeReplaceableCollectionType.swift */,
 				A2C94F441C7931F50043535F /* OrderedSet+Set.swift */,
+				A2C94F191C77CF150043535F /* OrderedSet.h */,
+				A2C94F301C77CF250043535F /* OrderedSet.swift */,
 			);
-			path = OrderedSet;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		A2C94F241C77CF150043535F /* OrderedSetTests */ = {
+		A2C94F241C77CF150043535F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A2C94F251C77CF150043535F /* OrderedSetTests.swift */,
 				A2C94F271C77CF150043535F /* Info.plist */,
+				A2C94F251C77CF150043535F /* OrderedSetTests.swift */,
 			);
-			path = OrderedSetTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +240,7 @@
 				A2C94F3D1C77D8D00043535F /* OrderedSet+Hashable.swift in Sources */,
 				A2C94F371C77D6CC0043535F /* OrderedSet+ArrayLiteralConvertible.swift in Sources */,
 				A2C94F351C77D6950043535F /* OrderedSet+CustomStringConvertible.swift in Sources */,
+				A2C94F491C7962610043535F /* Package.swift in Sources */,
 				A2C94F311C77CF250043535F /* OrderedSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +361,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = OrderedSet/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.OrderedSet;
@@ -375,7 +379,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = OrderedSet/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.OrderedSet;
@@ -387,7 +391,7 @@
 		A2C94F2E1C77CF150043535F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = OrderedSetTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.OrderedSetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -397,7 +401,7 @@
 		A2C94F2F1C77CF150043535F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = OrderedSetTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.OrderedSetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +427,7 @@
 				A2C94F2C1C77CF150043535F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2C94F2D1C77CF150043535F /* Build configuration list for PBXNativeTarget "OrderedSetTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +436,7 @@
 				A2C94F2F1C77CF150043535F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
