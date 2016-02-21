@@ -20,7 +20,7 @@
 		A2C94F411C78FECD0043535F /* OrderedSet+MutableSliceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F401C78FECD0043535F /* OrderedSet+MutableSliceable.swift */; };
 		A2C94F431C7927FC0043535F /* OrderedSet+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F421C7927FC0043535F /* OrderedSet+Array.swift */; };
 		A2C94F451C7931F50043535F /* OrderedSet+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F441C7931F50043535F /* OrderedSet+Set.swift */; };
-		A2C94F471C79605E0043535F /* OrderedSet.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2C94F461C79605E0043535F /* OrderedSet.podspec */; };
+		A2C94F471C79605E0043535F /* SwiftOrderedSet.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2C94F461C79605E0043535F /* SwiftOrderedSet.podspec */; };
 		A2C94F491C7962610043535F /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F481C7962610043535F /* Package.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 		A2C94F401C78FECD0043535F /* OrderedSet+MutableSliceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+MutableSliceable.swift"; sourceTree = "<group>"; };
 		A2C94F421C7927FC0043535F /* OrderedSet+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Array.swift"; sourceTree = "<group>"; };
 		A2C94F441C7931F50043535F /* OrderedSet+Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Set.swift"; sourceTree = "<group>"; };
-		A2C94F461C79605E0043535F /* OrderedSet.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OrderedSet.podspec; sourceTree = "<group>"; };
+		A2C94F461C79605E0043535F /* SwiftOrderedSet.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftOrderedSet.podspec; sourceTree = "<group>"; };
 		A2C94F481C7962610043535F /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +80,7 @@
 				A2C94F171C77CF150043535F /* Products */,
 				A2C94F181C77CF150043535F /* Sources */,
 				A2C94F241C77CF150043535F /* Tests */,
-				A2C94F461C79605E0043535F /* OrderedSet.podspec */,
+				A2C94F461C79605E0043535F /* SwiftOrderedSet.podspec */,
 				A2C94F481C7962610043535F /* Package.swift */,
 			);
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C94F471C79605E0043535F /* OrderedSet.podspec in Resources */,
+				A2C94F471C79605E0043535F /* SwiftOrderedSet.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
