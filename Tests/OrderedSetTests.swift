@@ -9,6 +9,8 @@
 import XCTest
 @testable import OrderedSet
 
+protocol TableSource {}
+
 class OrderedSetTests: XCTestCase {
     
     func testOrderedSet() {

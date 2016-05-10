@@ -6,7 +6,7 @@
 //  Copyright © 2016 Brad Hilton. All rights reserved.
 //
 
-extension OrderedSet : ArrayLiteralConvertible, RangeReplaceableCollectionType, MutableSliceable {
+extension OrderedSet : ArrayLiteralConvertible, RangeReplaceableCollectionType {
     
     /// Create an instance containing `elements`.
     public init(arrayLiteral elements: Element...) {
