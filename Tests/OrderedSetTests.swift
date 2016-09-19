@@ -37,6 +37,12 @@ class OrderedSetTests: XCTestCase {
         XCTAssert(orderedSet == ["Brad", "Lorraine", "Natalie", "Sarah", "Scott"])
     }
     
+    func testElementEqualTo() {
+        let orderedSet: OrderedSet<String> = ["Brad", "Lorraine", "Brad", "Sarah"]
+        XCTAssertNotNil(orderedSet.element(equalTo: "Lorraine"))
+        XCTAssertNil(orderedSet.element(equalTo: "Aleksei"))
+    }
+    
 }
 
 func ==(lhs: OrderedSet<String>, rhs: Array<String>) -> Bool {

@@ -20,6 +20,14 @@ extension OrderedSet {
         return set.contains(member)
     }
     
+    /// Returns Element equal to input one
+    public func element(equalTo element:Element) -> Element? {
+        if let indexOfElement = set.indexOf(element) {
+            return set[indexOfElement]
+        }
+        return nil
+    }
+    
     /// Remove the member from the ordered set and return it if it was present.
     public mutating func remove(member: Element) -> Element? {
         guard let index = array.indexOf(member) else { return nil }
