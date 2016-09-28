@@ -28,12 +28,14 @@ extension OrderedSet : ArrayLiteralConvertible, RangeReplaceableCollectionType {
     public mutating func replaceRange<C : CollectionType where C.Generator.Element == IndexingGenerator<OrderedSet>.Element>(subRange: Range<Index>, with newElements: C) {
         let oldArray = array[subRange]
         let oldSet = Set(oldArray)
-        let (newArray, newSet) = collapse(newElements)
+        var (newArray, newSet) = collapse(newElements)
         let deletions = oldSet.subtract(newSet)
         set.subtractInPlace(deletions)
+        newArray = newArray.filter { (element) -> Bool in
+            return !set.contains(element)
+        }
         set.unionInPlace(newSet)
         array.replaceRange(subRange, with: newArray)
-        array = array.enumerate().filter { (index, element) in return subRange.contains(index) || subRange.startIndex == index || !newSet.contains(element) }.map { $0.element }
     }
 
     public var capacity: Int {
