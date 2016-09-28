@@ -37,6 +37,24 @@ class OrderedSetTests: XCTestCase {
         XCTAssert(orderedSet == ["Brad", "Lorraine", "Natalie", "Sarah", "Scott"])
     }
     
+    func testElementEqualTo() {
+        let orderedSet: OrderedSet<String> = ["Brad", "Lorraine", "Brad", "Sarah"]
+        XCTAssertNotNil(orderedSet.element(equalTo: "Lorraine"))
+        XCTAssertNil(orderedSet.element(equalTo: "Aleksei"))
+    }
+    
+    func testOrderPreservance() {
+        var orderedSet1: OrderedSet<Int> = [3,2,1]
+        let orderedSet2: OrderedSet<Int> = [3,5,1]
+        
+        orderedSet1.unionInPlace(orderedSet2)
+        
+        print("orderedSet1.array: ", orderedSet1.array)
+        
+        XCTAssert(orderedSet1.array == [3,2,1,5])
+        
+        
+    }
 }
 
 func ==(lhs: OrderedSet<String>, rhs: Array<String>) -> Bool {
