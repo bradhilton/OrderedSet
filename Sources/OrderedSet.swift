@@ -7,7 +7,16 @@
 //
 
 /// An ordered collection of unique `Element` instances
-public struct OrderedSet<Element : Hashable> : Hashable, CollectionType, MutableCollectionType {
+public struct OrderedSet<Element : Hashable> : Hashable, Collection, MutableCollection {
+    /// Returns the position immediately after the given index.
+    ///
+    /// - Parameter i: A valid index of the collection. `i` must be less than
+    ///   `endIndex`.
+    /// - Returns: The index value immediately after `i`.
+    public func index(after i: Int) -> Int {
+        return i + 1
+    }
+
     
     internal(set) var array: [Element]
     internal(set) var set: Set<Element>
@@ -32,7 +41,7 @@ public struct OrderedSet<Element : Hashable> : Hashable, CollectionType, Mutable
             set.remove(oldValue)
             array[position] = newValue
             set.insert(newValue)
-            array = array.enumerate().filter { (index, element) in return index == position || element.hashValue != newValue.hashValue }.map { $0.element }
+            array = array.enumerated().filter { (index, element) in return index == position || element.hashValue != newValue.hashValue }.map { $0.element }
         }
     }
     
@@ -42,7 +51,7 @@ public struct OrderedSet<Element : Hashable> : Hashable, CollectionType, Mutable
     
 }
 
-@warn_unused_result
+
 public func ==<T : Hashable>(lhs: OrderedSet<T>, rhs: OrderedSet<T>) -> Bool {
     return lhs.set == rhs.set
 }
