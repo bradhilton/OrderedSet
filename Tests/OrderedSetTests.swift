@@ -18,7 +18,7 @@ class OrderedSetTests: XCTestCase {
         XCTAssert(orderedSet == ["Brad", "Lorraine", "Sarah"])
         orderedSet.append("Evan")
         XCTAssert(orderedSet == ["Brad", "Lorraine", "Sarah", "Evan"])
-        orderedSet.insert("Evan", atIndex: 0)
+        orderedSet.insert("Evan", at: 0)
         XCTAssert(orderedSet == ["Evan", "Brad", "Lorraine", "Sarah"])
         orderedSet[2] = "Brad"
         XCTAssert(orderedSet == ["Evan", "Brad", "Sarah"])
@@ -28,7 +28,7 @@ class OrderedSetTests: XCTestCase {
         XCTAssert(orderedSet == ["Sarah", "Scott", "Ivonne"])
         orderedSet.intersectInPlace(["Sarah", "Brad", "Ivonne"])
         XCTAssert(orderedSet == ["Sarah", "Ivonne"])
-        orderedSet.appendContentsOf(["Natalie", "Lorraine"])
+        orderedSet.append(contentsOf: ["Natalie", "Lorraine"])
         orderedSet.exclusiveOrInPlace(["Ivonne", "Brad", "Natalie"])
         XCTAssert(orderedSet == ["Sarah", "Lorraine", "Brad"])
         orderedSet = orderedSet + ["Lorraine", "Natalie"]

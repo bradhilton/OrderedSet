@@ -6,7 +6,7 @@
 //  Copyright © 2016 Brad Hilton. All rights reserved.
 //
 
-extension OrderedSet : ArrayLiteralConvertible, RangeReplaceableCollectionType {
+extension OrderedSet : ExpressibleByArrayLiteral, RangeReplaceableCollection {
     
     /// Create an instance containing `elements`.
     public init(arrayLiteral elements: Element...) {
@@ -20,21 +20,23 @@ extension OrderedSet : ArrayLiteralConvertible, RangeReplaceableCollectionType {
     }
     
     /// Construct from an arbitrary sequence with elements of type `Element`.
-    public init<S : SequenceType where S.Generator.Element == Element>(_ s: S) {
+    public init<S : Sequence>(_ s: S) where S.Iterator.Element == Element {
         (self.array, self.set) = collapse(s)
     }
     
     /// Replace the given `subRange` of elements with `newElements`.
-    public mutating func replaceRange<C : CollectionType where C.Generator.Element == IndexingGenerator<OrderedSet>.Element>(subRange: Range<Index>, with newElements: C) {
+    public mutating func replaceSubrange<C : Collection>(_ subRange: Range<Int>, with newElements: C) where C.Iterator.Element == IndexingIterator<OrderedSet>.Element {
         let oldArray = array[subRange]
         let oldSet = Set(oldArray)
         let (newArray, newSet) = collapse(newElements)
-        let deletions = oldSet.subtract(newSet)
-        set.subtractInPlace(deletions)
-        set.unionInPlace(newSet)
-        array.replaceRange(subRange, with: newArray)
-        array = array.enumerate().filter { (index, element) in return subRange.contains(index) || subRange.startIndex == index || !newSet.contains(element) }.map { $0.element }
+        let deletions = oldSet.subtracting(newSet)
+        set.subtract(deletions)
+        set.formUnion(newSet)
+        array.replaceSubrange(subRange, with: newArray)
+        array = array.enumerated().filter { (index, element) in return subRange.contains(index) || subRange.lowerBound == index || !newSet.contains(element) }.map { $0.element }
     }
+    
+    
 
     public var capacity: Int {
         return array.capacity
@@ -52,6 +54,6 @@ extension OrderedSet : ArrayLiteralConvertible, RangeReplaceableCollectionType {
 }
 
 /// Operator form of `appendContentsOf`.
-public func +=<Element, S : SequenceType where S.Generator.Element == Element>(inout lhs: OrderedSet<Element>, rhs: S) {
-    lhs.appendContentsOf(rhs)
+public func +=<Element, S : Sequence>(lhs: inout OrderedSet<Element>, rhs: S) where S.Iterator.Element == Element {
+    lhs.append(contentsOf: rhs)
 }
