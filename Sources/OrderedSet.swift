@@ -7,8 +7,11 @@
 //
 
 /// An ordered collection of unique `Element` instances
-public struct OrderedSet<Element : Hashable> : Hashable, Collection, MutableCollection {
-    
+public struct OrderedSet<Element : Hashable> : Hashable, RandomAccessCollection, MutableCollection {
+
+    public typealias SubSequence = ArraySlice<Element>
+    public typealias Indices = DefaultRandomAccessIndices<OrderedSet<Element>>
+
     internal(set) var array: [Element]
     internal(set) var set: Set<Element>
     
@@ -47,6 +50,14 @@ public struct OrderedSet<Element : Hashable> : Hashable, Collection, MutableColl
         return i + 1
     }
     
+    public func index(before i: Int) -> Int {
+        return i - 1
+    }
+    
+    public func index(_ i: Int, offsetBy n: Int, limitedBy limit: Int) -> Int? {
+        return array.index(i, offsetBy: n, limitedBy: limit)
+    }
+    
     public subscript(position: Int) -> Element {
         get {
             return array[position]
@@ -57,6 +68,36 @@ public struct OrderedSet<Element : Hashable> : Hashable, Collection, MutableColl
             array[position] = newValue
             set.insert(newValue)
             array = array.enumerated().filter { (index, element) in return index == position || element.hashValue != newValue.hashValue }.map { $0.element }
+        }
+    }
+    
+    /// Accesses a contiguous subrange of the collection's elements.
+    ///
+    /// The accessed slice uses the same indices for the same elements as the
+    /// original collection uses. Always use the slice's `startIndex` property
+    /// instead of assuming that its indices start at a particular value.
+    ///
+    /// This example demonstrates getting a slice of an array of strings, finding
+    /// the index of one of the strings in the slice, and then using that index
+    /// in the original array.
+    ///
+    ///     let streets = ["Adams", "Bryant", "Channing", "Douglas", "Evarts"]
+    ///     let streetsSlice = streets[2 ..< streets.endIndex]
+    ///     print(streetsSlice)
+    ///     // Prints "["Channing", "Douglas", "Evarts"]"
+    ///
+    ///     let index = streetsSlice.index(of: "Evarts")    // 4
+    ///     print(streets[index!])
+    ///     // Prints "Evarts"
+    ///
+    /// - Parameter bounds: A range of the collection's indices. The bounds of
+    ///   the range must be valid indices of the collection.
+    public subscript(bounds: Range<Int>) -> ArraySlice<Element> {
+        get {
+            return array[bounds]
+        }
+        set {
+            replaceSubrange(bounds, with: newValue)
         }
     }
     
