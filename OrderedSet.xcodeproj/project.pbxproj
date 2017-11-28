@@ -16,7 +16,6 @@
 		A2C94F431C7927FC0043535F /* OrderedSet+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F421C7927FC0043535F /* OrderedSet+Array.swift */; };
 		A2C94F451C7931F50043535F /* OrderedSet+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F441C7931F50043535F /* OrderedSet+Set.swift */; };
 		A2C94F471C79605E0043535F /* SwiftOrderedSet.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2C94F461C79605E0043535F /* SwiftOrderedSet.podspec */; };
-		A2C94F491C7962610043535F /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C94F481C7962610043535F /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,7 +221,6 @@
 				A2C94F391C77D7600043535F /* Functions.swift in Sources */,
 				A2C94F431C7927FC0043535F /* OrderedSet+Array.swift in Sources */,
 				A2C94F351C77D6950043535F /* OrderedSet+CustomStringConvertible.swift in Sources */,
-				A2C94F491C7962610043535F /* Package.swift in Sources */,
 				A2C94F311C77CF250043535F /* OrderedSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
