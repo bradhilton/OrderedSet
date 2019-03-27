@@ -10,10 +10,10 @@
 public struct OrderedSet<Element : Hashable> : Hashable, RandomAccessCollection, MutableCollection {
 
     public typealias SubSequence = ArraySlice<Element>
-    public typealias Indices = DefaultRandomAccessIndices<OrderedSet<Element>>
+    public typealias Indices = DefaultIndices<OrderedSet<Element>>
 
-    internal(set) var array: [Element]
-    internal(set) var set: Set<Element>
+    var array: [Element]
+    var set: Set<Element>
     
     /// The position of the first element in a nonempty collection.
     ///
@@ -101,8 +101,8 @@ public struct OrderedSet<Element : Hashable> : Hashable, RandomAccessCollection,
         }
     }
     
-    public var hashValue: Int {
-        return set.hashValue
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(set)
     }
     
 }
