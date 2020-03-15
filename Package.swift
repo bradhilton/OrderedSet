@@ -2,5 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "OrderedSet"
+    name: "OrderedSet",
+    targets: [
+        .target(
+            name: "OrderedSet",
+            dependencies: []
+        )
+    ]
 )
