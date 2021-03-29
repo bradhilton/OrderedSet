@@ -45,7 +45,7 @@ import OrderedSet
 
 ## Author
 
-Brad Hilton, brad@skyvive.com
+Brad Hilton, brad.hilton.nw@gmail.com
 
 ## License
 
